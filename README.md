@@ -1,2 +1,2 @@
 # firstwave
-destill manuscript on covid 1st wave
+experimenting with https://distill.pub/guide as an interactive format to describe the epidemiology of covid's first wave.
