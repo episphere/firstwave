@@ -48,9 +48,18 @@
     Specifically, the time-delayed embedding and compression of the multivariate timeseries is performed by a neural network visualization designed to explore relationships between causes of mortality.
     It is also hoped that the comparison of 2020 data with the previous 5 years for this initial period provides a baseline and a methodology to explore the shifting dynamics of COVID-19 progression in subsequent months and years.
     </p>
+    <h2>Data Preparation</h2>
     <p>
-        We can also cite <dt-cite key="Almeida2019"></dt-cite><dt-cite key="Almeida2015"></dt-cite>
-        external publications.
+    The bulk of the data used in this study comes from The Centers for Diseases Control and Prevention, CDC. 
+    Since the analysis compares 2020 with the previous 5 years, 2015-2019, the data preparation required the aggregation of two sources, 2014-2018<dt-cite key="cdc2018"></dt-cite> and 2019-2020<dt-cite key="cdc2020"></dt-cite>.
+    The data preparation process is not trivial, as variable names change over time and privacy concerns flag out counts between 1 and 6 for any given mortality category.
+    In order to facilitate this process, a data browser tool was developed and is made publicly available at <a href="https://episphere.github.io/mortalitytracker" target="_blank">episphere.github.io/mortalitytracker</a>. 
+    A third data source of data for COVID mortality is used by this tool to assess the consistency of the counts <dt-cite key="Dong2020"></dt-cite>. 
+    That same source, at Johns Hopkins University, provides the total confirmed case count.
+    For the sake of permanent reproducibility, the  
+    </p>
+    <p>
+        ... <dt-cite key="Almeida2019"></dt-cite><dt-cite key="Almeida2015"></dt-cite> ...
     </p>
 </dt-article>
 <dt-appendix></dt-appendix>
@@ -65,6 +74,24 @@
     url={https://arxiv.org/pdf/1502.04623.pdf}
   }
 
+  @article{cdc2018,
+    title={Weekly Counts of Deaths by State and Select Causes, 2014-2018},
+    author={# 3yf8-kanr},
+    journal={National Center for Health Statistics},
+    publisher = {CDC},
+    year={2018},
+    url={https://data.cdc.gov/resource/3yf8-kanr}
+  }
+
+  @article{cdc2020,
+    title={Weekly Counts of Deaths by State and Select Causes, 2019-2020},
+    author={# muzy-jte6},
+    journal={National Center for Health Statistics},
+    publisher = {CDC},
+    year={2020},
+    url={https://data.cdc.gov/resource/muzy-jte6}
+  }
+
   @article{Almeida2019,
     doi = {10.7717/peerj.6230},
     url = {https://doi.org/10.7717/peerj.6230},
@@ -73,7 +100,7 @@
     publisher = {PeerJ},
     volume = {7},
     pages = {e6230},
-    author = {Jonas S. Almeida and Janos Hajagos and Joel Saltz and Mary Saltz},
+    author = {Jonas S Almeida and Janos Hajagos and Joel Saltz and Mary Saltz},
     title = {Serverless OpenHealth at Data Commons Scale - traversing the 20 million patient records of New York's SPARCS dataset in real-time},
     journal = {PeerJ}
   }
@@ -81,13 +108,27 @@
   @article{Almeida2015,
     url      = {https://pubmed.ncbi.nlm.nih.gov/26958160},
     title    = {OpenHealth Platform for Interactive Contextualization of Population Health Open Data},  
-    author   = {Almeida, JS, J Hajagos, I Crnosija, T Kurc, M Saltz, J Saltz1},
+    author   = {Jonas S Almeida and Janos Hajagos and Igor Crnosija and Tahsin Kurc and Mary Saltz and Joel Saltz},
     journal  = {AMIA Annu Symp Proc},
     volume   = {eCollection 2015},
     pages    = {297-305},
     year     = {2015},
     pmid     = {26958160},
     pmc      = {PMC4765591}
-}
+  }
+
+  @article{Dong2020,
+    doi = {10.1016/s1473-3099(20)30120-1},
+    url = {https://doi.org/10.1016/s1473-3099(20)30120-1},
+    year = {2020},
+    month = may,
+    publisher = {Elsevier {BV}},
+    volume = {20},
+    number = {5},
+    pages = {533--534},
+    author = {Ensheng Dong and Hongru Du and Lauren Gardner},
+    title = {An interactive web-based dashboard to track {COVID}-19 in real time},
+    journal = {The Lancet Infectious Diseases}
+  }
 
 </script>
